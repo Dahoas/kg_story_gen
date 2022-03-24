@@ -1,0 +1,8 @@
+#Training data
+data/
+
+#logging
+wandb/
+
+#checkpoints
+kg-entity-gpt2/
