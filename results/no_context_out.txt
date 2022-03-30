@@ -1,0 +1,40 @@
+Input: Context: <SEP> Entities: ['gather', 'bull', 'around', 'man'] 
+Decoded output: <s>Context: <SEP> Entities: ['gather', 'bull', 'around','man'] </s>Ent
+Target:  field
+
+Input: Context: <SEP> Entities: ['person', 'make'] 
+Decoded output: <s>Context: <SEP> Entities: ['person','make'] </s>Entities<unk>say
+Target:  bear
+
+Input: Context: <SEP> Entities: ['go', 'train', 'stop', 'down', 'track'] 
+Decoded output: <s>Context: <SEP> Entities: ['go', 'train','stop', 'down', 'track'] </s>you
+Target:  subway
+
+Input: Context: <SEP> Entities: ['tomato', 'sausage', 'tortilla', 'shell', 'lettuce'] 
+Decoded output: <s>Context: <SEP> Entities: ['tomato','sausage', 'tortilla','shell', 'lettuce'] </s>Ent
+Target:  fries
+
+Input: Context: <SEP> Entities: ['navy', 'boot', 'street', 'wear', 'hat', 'uniform', 'blue', 'date entity', 'man', 'night', 'walk', 'captain', 'white'] 
+Decoded output: <s>Context: <SEP> Entities: ['navy', 'boot','street', 'wear', 'hat', 'uniform', 'blue', 'date entity','man', 'night', 'walk', 'captain', 'white'] </s>i
+Target:  busy
+
+Input: Context: <SEP> Entities: ['person', 'field', 'some', 'ball', 'mingle'] 
+Decoded output: <s>Context: <SEP> Entities: ['person', 'field','some', 'ball','mingle'] </s>you
+Target:  kick
+
+Input: Context: <SEP> Entities: ['man', 'outside', 'bagpipe', 'building', 'stand'] 
+Decoded output: <s>Context: <SEP> Entities: ['man', 'outside', 'bagpipe', 'building','stand'] </s>Ent
+Target:  play
+
+Input: Context: <SEP> Entities: ['arm', 'before', 'man', 'spot', 'roll', 'possible', 'chair', 'pump'] 
+Decoded output: <s>Context: <SEP> Entities: ['arm', 'before','man','spot', 'roll', 'possible', 'chair', 'pump'] </s>you
+Target:  answer
+
+Input: Context: <SEP> Entities: ['propose', 'man', 'cheer', 'kneel', 'in front of', 'woman', 'person', 'smile'] 
+Decoded output: <s>Context: <SEP> Entities: ['propose','man', 'cheer', 'kneel', 'in front of', 'woman', 'person','smile'] </s>Ent
+Target:  show
+
+Input: Context: <SEP> Entities: ['use', 'demonstrate', 'toy'] 
+Decoded output: <s>Context: <SEP> Entities: ['use', 'demonstrate', 'toy'] </s>Ent
+Target:  person
+

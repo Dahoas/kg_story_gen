@@ -1,0 +1,12 @@
+Input: Context: A man . <SEP> Entities: [man, run] 
+Decoded output: <s>Context: A man. <SEP> Entities: [man, run] </s>Entities
+Target:  
+
+Input: Context: Carrie got out of her car but she forgot her keys. <SEP> Entities: [Carrie, car] 
+Decoded output: <s>Context: Carrie got out of her car but she forgot her keys. <SEP> Entities: [Carrie, car] </s><unk>
+Target:  
+
+Input: Context: Bob went to eat lunch at the local diner. <SEP> Entities: [Bob, lunch] 
+Decoded output: <s>Context: Bob went to eat lunch at the local diner. <SEP> Entities: [Bob, lunch] </s><unk>
+Target:  
+

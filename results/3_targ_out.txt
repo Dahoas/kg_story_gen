@@ -1,0 +1,40 @@
+Input: Context:  The men gather around the field where two bulls are. <SEP> Entities: ['around', 'field'] 
+Decoded output: <s>Context:  The men gather around the field where two bulls are. <SEP> Entities: ['around', 'field'] </s>g
+Target:  ['gather', 'man', 'bull']
+
+Input: Context: a person is making teddy bear <SEP> Entities: [] 
+Decoded output: <s>Context: a person is making teddy bear <SEP> Entities: [] </s>bear<unk>
+Target:  ['person', 'bear', 'make']
+
+Input: Context: A train is going down the tracks through a subway stop. <SEP> Entities: ['stop', 'subway', 'train'] 
+Decoded output: <s>Context: A train is going down the tracks through a subway stop. <SEP> Entities: ['stop','subway', 'train'] </s>track
+Target:  ['down', 'track', 'go']
+
+Input: Context: A tortilla shell with french fries, tomatoes, lettuce and sausage. <SEP> Entities: ['fries', 'shell', 'lettuce'] 
+Decoded output: <s>Context: A tortilla shell with french fries, tomatoes, lettuce and sausage. <SEP> Entities: ['fries','shell', 'lettuce'] </s>tom
+Target:  ['sausage', 'tomato', 'tortilla']
+
+Input: Context: Two men in navy blue uniforms with navy captain's hats and white boots are walking down a small, brick, busy street at night. <SEP> Entities: ['hat', 'uniform', 'busy', 'navy', 'date entity', 'street', 'blue', 'night', 'man', 'walk', 'white'] 
+Decoded output: <s>Context: Two men in navy blue uniforms with navy captain's hats and white boots are walking down a small, brick, busy street at night. <SEP> Entities: ['hat', 'uniform', 'busy', 'navy', 'date entity','street', 'blue', 'night','man', 'walk', 'white'] </s>boot
+Target:  ['wear', 'captain', 'boot']
+
+Input: Context: Some people mingle on a soccer field while one person kicks the ball. <SEP> Entities: ['mingle', 'some', 'ball'] 
+Decoded output: <s>Context: Some people mingle on a soccer field while one person kicks the ball. <SEP> Entities: ['mingle','some', 'ball'] </s>person
+Target:  ['person', 'field', 'kick']
+
+Input: Context: A man is playing the bagpipe while standing outside a building. <SEP> Entities: ['outside', 'bagpipe', 'play'] 
+Decoded output: <s>Context: A man is playing the bagpipe while standing outside a building. <SEP> Entities: ['outside', 'bagpipe', 'play'] </s>man
+Target:  ['building', 'man', 'stand']
+
+Input: Context: Before man can answer, man spots man rolling the chair himself, pumping both arms. <SEP> Entities: ['arm', 'possible', 'pump', 'spot', 'man', 'before'] 
+Decoded output: <s>Context: Before man can answer, man spots man rolling the chair himself, pumping both arms. <SEP> Entities: ['arm', 'possible', 'pump','spot','man', 'before'] </s>answer
+Target:  ['chair', 'roll', 'answer']
+
+Input: Context: A man is shown kneeled in front of a smiling woman and people are cheering as he proposes. <SEP> Entities: ['man', 'woman', 'cheer', 'propose', 'in front of', 'show'] 
+Decoded output: <s>Context: A man is shown kneeled in front of a smiling woman and people are cheering as he proposes. <SEP> Entities: ['man', 'woman', 'cheer', 'propose', 'in front of','show'] </s>person
+Target:  ['kneel', 'smile', 'person']
+
+Input: Context: a person demonstrating how to use a toy <SEP> Entities: ['use'] 
+Decoded output: <s>Context: a person demonstrating how to use a toy <SEP> Entities: ['use'] </s>demon
+Target:  ['person', 'demonstrate', 'toy']
+

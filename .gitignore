@@ -5,4 +5,4 @@ data/
 wandb/
 
 #checkpoints
-kg-entity-gpt2/
+kg-entity-gpt2-ckpt/

@@ -15,7 +15,7 @@ __LOG__ = True
 
 wandb.init(entity='dahoas') if __LOG__ else None
 
-tokenizer = BartTokenizer.from_pretrained('/home/alex/skg_multisource/imagination_gpt2_tokenizer')
+tokenizer = AutoTokenizer.from_pretrained('/home/alex/skg_multisource/imagination_gpt2_tokenizer')
 model = AutoModelForCausalLM.from_pretrained('gpt2')
 model.resize_token_embeddings(len(tokenizer))
 
@@ -30,6 +30,7 @@ class TextDataset(Dataset):
 		with open(file_path, 'r') as fr:
 			line_iterator = tqdm(fr, desc='processing {}'.format(file_path))
 			for line in line_iterator:
+				if count < 500000:
 					count+=1
 					graph_obj = json.loads(line.strip())
 
@@ -86,7 +87,5 @@ Trainer(model=model, args=training_args, train_dataset=train_dataset,
 															  'attention_mask': torch.stack([f[1] for f in data]),
 															  'labels': torch.stack([f[2] for f in data])}).train()
 
-
-trainer.train()
 
 model.save_pretrained(f'{save_name}-ckpt')
