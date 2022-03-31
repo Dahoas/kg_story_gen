@@ -1,12 +1,40 @@
-Input: Context: A man . <SEP> Entities: [man, run] 
-Decoded output: <s>Context: A man. <SEP> Entities: [man, run] </s>Entities
-Target:  
+Input: |<startoftext>|Current Entities: {'figure', 'habit', 'examine', 'try', 'thing'} <SEP> Target Entities: {'good', 'start', 'feel'} 
+Decoded output: |<startoftext>|Current Entities: {'figure', 'habit', 'examine', 'try', 'thing'} <SEP> Target Entities: {'good','start', 'feel'} <GEN> Target
+Target:  realize|<endoftext>|
 
-Input: Context: Carrie got out of her car but she forgot her keys. <SEP> Entities: [Carrie, car] 
-Decoded output: <s>Context: Carrie got out of her car but she forgot her keys. <SEP> Entities: [Carrie, car] </s><unk>
-Target:  
+Input: |<startoftext>|Current Entities: {'lately', 'figure', 'habit', 'realize', 'eat', 'examine', 'try', 'fast', 'food', 'thing'} <SEP> Target Entities: {'good', 'start', 'feel'} 
+Decoded output: |<startoftext>|Current Entities: {'lately', 'figure', 'habit','realize', 'eat', 'examine', 'try', 'fast', 'food', 'thing'} <SEP> Target Entities: {'good','start', 'feel'} <GEN> Target
+Target:  stop|<endoftext>|
 
-Input: Context: Bob went to eat lunch at the local diner. <SEP> Entities: [Bob, lunch] 
-Decoded output: <s>Context: Bob went to eat lunch at the local diner. <SEP> Entities: [Bob, lunch] </s><unk>
-Target:  
+Input: |<startoftext>|Current Entities: {'lately', 'figure', 'habit', 'realize', 'diet', 'stop', 'eat', 'start', 'examine', 'try', 'go', 'fast', 'place', 'food', 'thing'} <SEP> Target Entities: {'good', 'start', 'feel'} 
+Decoded output: |<startoftext>|Current Entities: {'lately', 'figure', 'habit','realize', 'diet','stop', 'eat','start', 'examine', 'try', 'go', 'fast', 'place', 'food', 'thing'} <SEP> Target Entities: {'good','start', 'feel'} <GEN> Target
+Target:  start|<endoftext>|
+
+Input: |<startoftext>|Current Entities: {'make', 'anger', 'guest', 'day'} <SEP> Target Entities: {'regret', 'act', 'couch', 'fill', 'person', 'sit'} 
+Decoded output: |<startoftext>|Current Entities: {'make', 'anger', 'guest', 'day'} <SEP> Target Entities: {'regret', 'act', 'couch', 'fill', 'person','sit'} <GEN> Target
+Target:  wall|<endoftext>|
+
+Input: |<startoftext>|Current Entities: {'hole', 'anger', 'make', 'punch', 'day', 'wall', 'house', 'guest'} <SEP> Target Entities: {'regret', 'act', 'couch', 'fill', 'person', 'sit'} 
+Decoded output: |<startoftext>|Current Entities: {'hole', 'anger','make', 'punch', 'day', 'wall', 'house', 'guest'} <SEP> Target Entities: {'regret', 'act', 'couch', 'fill', 'person','sit'} <GEN> Target
+Target:  quick|<endoftext>|
+
+Input: |<startoftext>|Current Entities: {'hole', 'anger', 'quick', 'make', 'punch', 'become', 'fear', 'day', 'wall', 'house', 'person', 'guest', 'leave'} <SEP> Target Entities: {'regret', 'act', 'couch', 'fill', 'person', 'sit'} 
+Decoded output: |<startoftext>|Current Entities: {'hole', 'anger', 'quick','make', 'punch', 'become', 'fear', 'day', 'wall', 'house', 'person', 'guest', 'leave'} <SEP> Target Entities: {'regret', 'act', 'couch', 'fill', 'person','sit'} <GEN> Target
+Target:  person|<endoftext>|
+
+Input: |<startoftext>|Current Entities: {'think', 'truck', 'good', 'need', 'person', 'thing'} <SEP> Target Entities: {'end', 'advise', 'truck', 'want', 'buy', 'person'} 
+Decoded output: |<startoftext>|Current Entities: {'think', 'truck', 'good', 'need', 'person', 'thing'} <SEP> Target Entities: {'end', 'advise', 'truck', 'want', 'buy', 'person'} <GEN> Target
+Target:  point|<endoftext>|
+
+Input: |<startoftext>|Current Entities: {'think', 'truck', 'point', 'good', 'vehicle', 'need', 'person', 'thing'} <SEP> Target Entities: {'end', 'advise', 'truck', 'want', 'buy', 'person'} 
+Decoded output: |<startoftext>|Current Entities: {'think', 'truck', 'point', 'good','vehicle', 'need', 'person', 'thing'} <SEP> Target Entities: {'end', 'advise', 'truck', 'want', 'buy', 'person'} <GEN> Target
+Target:  way|<endoftext>|
+
+Input: |<startoftext>|Current Entities: {'think', 'set', 'truck', 'point', 'good', 'vehicle', 'way', 'need', 'person', 'thing'} <SEP> Target Entities: {'end', 'advise', 'truck', 'want', 'buy', 'person'} 
+Decoded output: |<startoftext>|Current Entities: {'think','set', 'truck', 'point', 'good','vehicle', 'way', 'need', 'person', 'thing'} <SEP> Target Entities: {'end', 'advise', 'truck', 'want', 'buy', 'person'} <GEN> Target
+Target:  person|<endoftext>|
+
+Input: |<startoftext>|Current Entities: {'try', 'avail', 'memorize', 'sermon'} <SEP> Target Entities: {'delight', 'congregation'} 
+Decoded output: |<startoftext>|Current Entities: {'try', 'avail','memorize','sermon'} <SEP> Target Entities: {'delight', 'congregation'} <GEN>  '
+Target:  learn|<endoftext>|
 

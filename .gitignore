@@ -1,7 +1,11 @@
 #Training data
+skg_multisource/
 
 #logging
 wandb/
 
 #checkpoints
 kg-entity-gpt2-ckpt/
+
+#pycache
+__pycache__

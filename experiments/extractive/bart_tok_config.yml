@@ -1,0 +1,8 @@
+{
+  'model_type': 'gpt2-large',
+  'tokenizer_type': 'hybrid',
+  'tokenizer_path': '/srv/share2/ahavrilla3/kg_story_gen/data/imagination_gpt2_tokenizer',
+  'datapath': '/srv/share2/ahavrilla3/kg_story_gen/data/skg_multisource/train.json',
+  'task': 'extractive',
+  'results_file': 'out.txt'
+}
