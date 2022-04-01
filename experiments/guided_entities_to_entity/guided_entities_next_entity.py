@@ -5,7 +5,7 @@ import torch
 from torch.utils.data import Dataset
 from tqdm import tqdm
 
-class EntitiesToEntityDataset(Dataset):
+class GuidedEntitiesToEntityDataset(Dataset):
 	def __init__(self, tokenizer, gen_token_id, file_path='train', read_range=None, kg_max_length=150, max_length=350):
 
 		self.input_ids = []
@@ -24,8 +24,11 @@ class EntitiesToEntityDataset(Dataset):
 				count = count+1
 			for story in stories:
 				#Goal entitiy set
+				target_entities = json.loads(story[-1].strip())["entities"]
 				entity_set = json.loads(story[0].strip())["entities"]
+				random.shuffle(target_entities)
 				random.shuffle(entity_set)
+				target_entities_set = set(target_entities)
 				entity_set = set(entity_set)
 				story.pop(0)
 				for line in story:
@@ -36,7 +39,7 @@ class EntitiesToEntityDataset(Dataset):
 					#Restrict goal to one entity
 					goal = next_entities[0]
 					#Only giving entities for goal sentence seems suspect
-					text_input = f'|<startoftext>|{entity_set} <GEN> {goal}|<endoftext>|'
+					text_input = f'|<startoftext>|{entity_set} <SEP> {target_entities_set} <GEN> {goal}|<endoftext>|'
 					self.dataset.append(text_input)
 					temp_encoding = tokenizer(text_input)["input_ids"]
 					encodings_dict = tokenizer(text_input, truncation=False,

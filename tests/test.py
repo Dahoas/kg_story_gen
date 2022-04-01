@@ -1,6 +1,5 @@
 from transformers import BartTokenizer, AutoTokenizer
+from transformers import AutoTokenizer, TrainingArguments, Trainer, AutoModelForCausalLM, IntervalStrategy
 
-tokenizer = BartTokenizer.from_pretrained('/srv/share2/ahavrilla3/kg_story_gen/data/imagination_hybrid_tokenizer')
-tok = tokenizer('<GEN>')
-print(tok)
-print(tokenizer.decode(tok['input_ids']))
+model = AutoModelForCausalLM.from_pretrained('gpt2')
+model.save_pretrained('/srv/share2/ahavrilla3/kg_story_gen/tests/here')

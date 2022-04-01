@@ -1,40 +1,40 @@
-Input: |<startoftext>|Current Entities: {'figure', 'habit', 'examine', 'try', 'thing'} <SEP> Target Entities: {'good', 'start', 'feel'} 
-Decoded output: |<startoftext>|Current Entities: {'figure', 'habit', 'examine', 'try', 'thing'} <SEP> Target Entities: {'good','start', 'feel'} <GEN> Target
+Input: |<startoftext>|{'figure', 'habit', 'examine', 'try', 'thing'} 
+Decoded output: |<startoftext>|{'figure', 'habit', 'examine', 'try', 'thing'} <GEN> real
 Target:  realize|<endoftext>|
 
-Input: |<startoftext>|Current Entities: {'lately', 'figure', 'habit', 'realize', 'eat', 'examine', 'try', 'fast', 'food', 'thing'} <SEP> Target Entities: {'good', 'start', 'feel'} 
-Decoded output: |<startoftext>|Current Entities: {'lately', 'figure', 'habit','realize', 'eat', 'examine', 'try', 'fast', 'food', 'thing'} <SEP> Target Entities: {'good','start', 'feel'} <GEN> Target
-Target:  stop|<endoftext>|
+Input: |<startoftext>|{'figure', 'examine', 'habit', 'fast', 'eat', 'food', 'try', 'thing', 'lately', 'realize'} 
+Decoded output: |<startoftext>|{'figure', 'examine', 'habit', 'fast', 'eat', 'food', 'try', 'thing', 'lately','realize'} <GEN> feel
+Target:  diet|<endoftext>|
 
-Input: |<startoftext>|Current Entities: {'lately', 'figure', 'habit', 'realize', 'diet', 'stop', 'eat', 'start', 'examine', 'try', 'go', 'fast', 'place', 'food', 'thing'} <SEP> Target Entities: {'good', 'start', 'feel'} 
-Decoded output: |<startoftext>|Current Entities: {'lately', 'figure', 'habit','realize', 'diet','stop', 'eat','start', 'examine', 'try', 'go', 'fast', 'place', 'food', 'thing'} <SEP> Target Entities: {'good','start', 'feel'} <GEN> Target
-Target:  start|<endoftext>|
+Input: |<startoftext>|{'figure', 'start', 'place', 'go', 'examine', 'habit', 'fast', 'eat', 'food', 'try', 'diet', 'thing', 'stop', 'lately', 'realize'} 
+Decoded output: |<startoftext>|{'figure','start', 'place', 'go', 'examine', 'habit', 'fast', 'eat', 'food', 'try', 'diet', 'thing','stop', 'lately','realize'} <GEN> feel
+Target:  good|<endoftext>|
 
-Input: |<startoftext>|Current Entities: {'make', 'anger', 'guest', 'day'} <SEP> Target Entities: {'regret', 'act', 'couch', 'fill', 'person', 'sit'} 
-Decoded output: |<startoftext>|Current Entities: {'make', 'anger', 'guest', 'day'} <SEP> Target Entities: {'regret', 'act', 'couch', 'fill', 'person','sit'} <GEN> Target
-Target:  wall|<endoftext>|
+Input: |<startoftext>|{'guest', 'anger', 'make', 'day'} 
+Decoded output: |<startoftext>|{'guest', 'anger','make', 'day'} <GEN> p
+Target:  hole|<endoftext>|
 
-Input: |<startoftext>|Current Entities: {'hole', 'anger', 'make', 'punch', 'day', 'wall', 'house', 'guest'} <SEP> Target Entities: {'regret', 'act', 'couch', 'fill', 'person', 'sit'} 
-Decoded output: |<startoftext>|Current Entities: {'hole', 'anger','make', 'punch', 'day', 'wall', 'house', 'guest'} <SEP> Target Entities: {'regret', 'act', 'couch', 'fill', 'person','sit'} <GEN> Target
-Target:  quick|<endoftext>|
+Input: |<startoftext>|{'day', 'guest', 'house', 'hole', 'wall', 'punch', 'anger', 'make'} 
+Decoded output: |<startoftext>|{'day', 'guest', 'house', 'hole', 'wall', 'punch', 'anger','make'} <GEN> call
+Target:  leave|<endoftext>|
 
-Input: |<startoftext>|Current Entities: {'hole', 'anger', 'quick', 'make', 'punch', 'become', 'fear', 'day', 'wall', 'house', 'person', 'guest', 'leave'} <SEP> Target Entities: {'regret', 'act', 'couch', 'fill', 'person', 'sit'} 
-Decoded output: |<startoftext>|Current Entities: {'hole', 'anger', 'quick','make', 'punch', 'become', 'fear', 'day', 'wall', 'house', 'person', 'guest', 'leave'} <SEP> Target Entities: {'regret', 'act', 'couch', 'fill', 'person','sit'} <GEN> Target
-Target:  person|<endoftext>|
+Input: |<startoftext>|{'quick', 'fear', 'day', 'guest', 'house', 'hole', 'wall', 'punch', 'become', 'person', 'anger', 'make', 'leave'} 
+Decoded output: |<startoftext>|{'quick', 'fear', 'day', 'guest', 'house', 'hole', 'wall', 'punch', 'become', 'person', 'anger','make', 'leave'} <GEN> sit
+Target:  fill|<endoftext>|
 
-Input: |<startoftext>|Current Entities: {'think', 'truck', 'good', 'need', 'person', 'thing'} <SEP> Target Entities: {'end', 'advise', 'truck', 'want', 'buy', 'person'} 
-Decoded output: |<startoftext>|Current Entities: {'think', 'truck', 'good', 'need', 'person', 'thing'} <SEP> Target Entities: {'end', 'advise', 'truck', 'want', 'buy', 'person'} <GEN> Target
+Input: |<startoftext>|{'truck', 'person', 'thing', 'think', 'need', 'good'} 
+Decoded output: |<startoftext>|{'truck', 'person', 'thing', 'think', 'need', 'good'} <GEN> person
 Target:  point|<endoftext>|
 
-Input: |<startoftext>|Current Entities: {'think', 'truck', 'point', 'good', 'vehicle', 'need', 'person', 'thing'} <SEP> Target Entities: {'end', 'advise', 'truck', 'want', 'buy', 'person'} 
-Decoded output: |<startoftext>|Current Entities: {'think', 'truck', 'point', 'good','vehicle', 'need', 'person', 'thing'} <SEP> Target Entities: {'end', 'advise', 'truck', 'want', 'buy', 'person'} <GEN> Target
-Target:  way|<endoftext>|
-
-Input: |<startoftext>|Current Entities: {'think', 'set', 'truck', 'point', 'good', 'vehicle', 'way', 'need', 'person', 'thing'} <SEP> Target Entities: {'end', 'advise', 'truck', 'want', 'buy', 'person'} 
-Decoded output: |<startoftext>|Current Entities: {'think','set', 'truck', 'point', 'good','vehicle', 'way', 'need', 'person', 'thing'} <SEP> Target Entities: {'end', 'advise', 'truck', 'want', 'buy', 'person'} <GEN> Target
+Input: |<startoftext>|{'truck', 'person', 'vehicle', 'thing', 'point', 'think', 'need', 'good'} 
+Decoded output: |<startoftext>|{'truck', 'person','vehicle', 'thing', 'point', 'think', 'need', 'good'} <GEN> person
 Target:  person|<endoftext>|
 
-Input: |<startoftext>|Current Entities: {'try', 'avail', 'memorize', 'sermon'} <SEP> Target Entities: {'delight', 'congregation'} 
-Decoded output: |<startoftext>|Current Entities: {'try', 'avail','memorize','sermon'} <SEP> Target Entities: {'delight', 'congregation'} <GEN>  '
-Target:  learn|<endoftext>|
+Input: |<startoftext>|{'set', 'truck', 'person', 'way', 'vehicle', 'thing', 'point', 'think', 'need', 'good'} 
+Decoded output: |<startoftext>|{'set', 'truck', 'person', 'way','vehicle', 'thing', 'point', 'think', 'need', 'good'} <GEN> person
+Target:  want|<endoftext>|
+
+Input: |<startoftext>|{'sermon', 'try', 'memorize', 'avail'} 
+Decoded output: |<startoftext>|{'sermon', 'try','memorize', 'avail'} <GEN> remember
+Target:  sing|<endoftext>|
 

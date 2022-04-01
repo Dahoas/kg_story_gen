@@ -1,0 +1,40 @@
+Input: |<startoftext>|{'habit', 'examine', 'try', 'figure', 'thing'} 
+Decoded output: |<startoftext>|{'habit', 'examine', 'try', 'figure', 'thing'} <GEN> {
+Target:  {'eat', 'lately', 'food', 'realize', 'fast'}|<endoftext>|
+
+Input: |<startoftext>|{'eat', 'habit', 'examine', 'try', 'lately', 'figure', 'thing', 'food', 'realize', 'fast'} 
+Decoded output: |<startoftext>|{'eat', 'habit', 'examine', 'try', 'lately', 'figure', 'thing', 'food','realize', 'fast'} <GEN> {
+Target:  {'stop', 'go', 'place', 'start', 'diet'}|<endoftext>|
+
+Input: |<startoftext>|{'eat', 'stop', 'habit', 'examine', 'try', 'lately', 'go', 'figure', 'place', 'start', 'diet', 'thing', 'food', 'realize', 'fast'} 
+Decoded output: |<startoftext>|{'eat','stop', 'habit', 'examine', 'try', 'lately', 'go', 'figure', 'place','start', 'diet', 'thing', 'food','realize', 'fast'} <GEN> {
+Target:  {'good', 'feel', 'start'}|<endoftext>|
+
+Input: |<startoftext>|{'guest', 'day', 'make', 'anger'} 
+Decoded output: |<startoftext>|{'guest', 'day','make', 'anger'} <GEN> {
+Target:  {'hole', 'house', 'punch', 'wall'}|<endoftext>|
+
+Input: |<startoftext>|{'wall', 'punch', 'guest', 'make', 'house', 'day', 'hole', 'anger'} 
+Decoded output: |<startoftext>|{'wall', 'punch', 'guest','make', 'house', 'day', 'hole', 'anger'} <GEN> {
+Target:  {'leave', 'person', 'guest', 'fear', 'quick', 'become'}|<endoftext>|
+
+Input: |<startoftext>|{'wall', 'punch', 'leave', 'person', 'guest', 'make', 'fear', 'house', 'day', 'quick', 'hole', 'become', 'anger'} 
+Decoded output: |<startoftext>|{'wall', 'punch', 'leave', 'person', 'guest','make', 'fear', 'house', 'day', 'quick', 'hole', 'become', 'anger'} <GEN> {
+Target:  {'couch', 'person', 'sit', 'regret', 'fill', 'act'}|<endoftext>|
+
+Input: |<startoftext>|{'good', 'person', 'think', 'truck', 'thing', 'need'} 
+Decoded output: |<startoftext>|{'good', 'person', 'think', 'truck', 'thing', 'need'} <GEN> {
+Target:  {'point', 'vehicle', 'person'}|<endoftext>|
+
+Input: |<startoftext>|{'point', 'good', 'person', 'think', 'vehicle', 'truck', 'thing', 'need'} 
+Decoded output: |<startoftext>|{'point', 'good', 'person', 'think','vehicle', 'truck', 'thing', 'need'} <GEN> {
+Target:  {'set', 'way', 'person'}|<endoftext>|
+
+Input: |<startoftext>|{'point', 'good', 'person', 'think', 'set', 'vehicle', 'way', 'truck', 'thing', 'need'} 
+Decoded output: |<startoftext>|{'point', 'good', 'person', 'think','set','vehicle', 'way', 'truck', 'thing', 'need'} <GEN> {
+Target:  {'person', 'advise', 'end', 'want', 'truck', 'buy'}|<endoftext>|
+
+Input: |<startoftext>|{'sermon', 'avail', 'try', 'memorize'} 
+Decoded output: |<startoftext>|{'sermon', 'avail', 'try','memorize'} <GEN> {
+Target:  {'learn', 'sing', 'overcome', 'handicap', 'decide'}|<endoftext>|
+

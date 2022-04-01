@@ -6,6 +6,7 @@ wandb/
 
 #checkpoints
 kg-entity-gpt2-ckpt/
+ckpts/
 
 #pycache
 __pycache__

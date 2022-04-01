@@ -1,0 +1,40 @@
+Input: |<startoftext>|{'habit', 'thing', 'try', 'examine', 'figure'} 
+Decoded output: |<startoftext>|{'habit', 'thing', 'try', 'examine', 'figure'} <GEN> see
+Target:  realize|<endoftext>|
+
+Input: |<startoftext>|{'food', 'habit', 'thing', 'try', 'fast', 'lately', 'realize', 'examine', 'figure', 'eat'} 
+Decoded output: |<startoftext>|{'food', 'habit', 'thing', 'try', 'fast', 'lately','realize', 'examine', 'figure', 'eat'} <GEN> help
+Target:  go|<endoftext>|
+
+Input: |<startoftext>|{'food', 'habit', 'thing', 'try', 'diet', 'start', 'fast', 'lately', 'realize', 'stop', 'examine', 'place', 'figure', 'eat', 'go'} 
+Decoded output: |<startoftext>|{'food', 'habit', 'thing', 'try', 'diet','start', 'fast', 'lately','realize','stop', 'examine', 'place', 'figure', 'eat', 'go'} <GEN> feel
+Target:  start|<endoftext>|
+
+Input: |<startoftext>|{'anger', 'day', 'make', 'guest'} 
+Decoded output: |<startoftext>|{'anger', 'day','make', 'guest'} <GEN> p
+Target:  wall|<endoftext>|
+
+Input: |<startoftext>|{'wall', 'day', 'anger', 'hole', 'make', 'guest', 'house', 'punch'} 
+Decoded output: |<startoftext>|{'wall', 'day', 'anger', 'hole','make', 'guest', 'house', 'punch'} <GEN> p
+Target:  fear|<endoftext>|
+
+Input: |<startoftext>|{'wall', 'become', 'day', 'anger', 'hole', 'person', 'make', 'guest', 'quick', 'leave', 'house', 'punch', 'fear'} 
+Decoded output: |<startoftext>|{'wall', 'become', 'day', 'anger', 'hole', 'person','make', 'guest', 'quick', 'leave', 'house', 'punch', 'fear'} <GEN> sit
+Target:  sit|<endoftext>|
+
+Input: |<startoftext>|{'need', 'thing', 'person', 'good', 'think', 'truck'} 
+Decoded output: |<startoftext>|{'need', 'thing', 'person', 'good', 'think', 'truck'} <GEN> sc
+Target:  person|<endoftext>|
+
+Input: |<startoftext>|{'vehicle', 'need', 'thing', 'person', 'good', 'point', 'think', 'truck'} 
+Decoded output: |<startoftext>|{'vehicle', 'need', 'thing', 'person', 'good', 'point', 'think', 'truck'} <GEN> person
+Target:  set|<endoftext>|
+
+Input: |<startoftext>|{'vehicle', 'need', 'thing', 'person', 'good', 'point', 'way', 'think', 'set', 'truck'} 
+Decoded output: |<startoftext>|{'vehicle', 'need', 'thing', 'person', 'good', 'point', 'way', 'think','set', 'truck'} <GEN> person
+Target:  truck|<endoftext>|
+
+Input: |<startoftext>|{'sermon', 'try', 'avail', 'memorize'} 
+Decoded output: |<startoftext>|{'sermon', 'try', 'avail','memorize'} <GEN> person
+Target:  sing|<endoftext>|
+

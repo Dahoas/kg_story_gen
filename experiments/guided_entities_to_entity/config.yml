@@ -3,8 +3,6 @@
   'tokenizer_type': 'gpt2',
   'tokenizer_path': '/srv/share2/ahavrilla3/kg_story_gen/data/imagination_gpt2_tokenizer',
   'datapath': '/srv/share2/ahavrilla3/kg_story_gen/data/roc_concept2story/train.json',
-  'task': 'entities_to_entity',
-  'results_file': 'out.txt',
-  'use_ckpt': True,
-  'ckpt_path': '/srv/share2/ahavrilla3/kg_story_gen/entities-to-entity-gpt2' #This should not end in /
+  'task': 'guided_entities_to_entity',
+  'results_file': 'out.txt'
 }

@@ -5,7 +5,7 @@ import torch
 from torch.utils.data import Dataset
 from tqdm import tqdm
 
-class EntitiesToEntityDataset(Dataset):
+class EntitiesToEntitiesDataset(Dataset):
 	def __init__(self, tokenizer, gen_token_id, file_path='train', read_range=None, kg_max_length=150, max_length=350):
 
 		self.input_ids = []
@@ -33,10 +33,12 @@ class EntitiesToEntityDataset(Dataset):
 					next_entities = graph_obj['entities']
 					random.shuffle(next_entities)
 					next_entities_set = set(next_entities)
-					#Restrict goal to one entity
-					goal = next_entities[0]
+					#Goal is only next 2 entities
+					goal = next_entities[:2]
+					goal = ', '.join(goal)
+					entity_set_text = ', '.join(list(entity_set))
 					#Only giving entities for goal sentence seems suspect
-					text_input = f'|<startoftext>|{entity_set} <GEN> {goal}|<endoftext>|'
+					text_input = f'|<startoftext>|{entity_set_text} <GEN> {goal}|<endoftext>|'
 					self.dataset.append(text_input)
 					temp_encoding = tokenizer(text_input)["input_ids"]
 					encodings_dict = tokenizer(text_input, truncation=False,

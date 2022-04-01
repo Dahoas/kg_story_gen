@@ -1,7 +1,10 @@
 import yaml
-from experiments.entities_to_entity.entities_next_entity import EntitiesToEntityDataset
+from experiments.guided_entities_to_entity.guided_entities_next_entity import GuidedEntitiesToEntityDataset
 from experiments.extractive.extractive import ExtractiveDataset
+from experiments.entities_to_entity.entities_next_entity import EntitiesToEntityDataset
 from transformers import AutoTokenizer, BartTokenizer, GPT2Tokenizer
+
+from experiments.entities_to_entities.entities_next_entities import EntitiesToEntitiesDataset
 
 def load_run_config(config_path):
 	with open(config_path, 'r') as f:
@@ -13,6 +16,10 @@ def get_dataset_from_task(filepath, task, tokenizer, gen_token_id):
 		data = ExtractiveDataset(tokenizer, gen_token_id, file_path=filepath)
 	elif task == "entities_to_entity":
 		data = EntitiesToEntityDataset(tokenizer, gen_token_id, file_path=filepath)
+	elif task == "guided_entities_to_entity":
+		data = GuidedEntitiesToEntityDataset(tokenizer, gen_token_id, file_path=filepath)
+	elif task == "entities_to_entities":
+		data = EntitiesToEntitiesDataset(tokenizer, gen_token_id, file_path=filepath)
 	else:
 		raise ValueError(f"{task} is unknown task")
 	return data

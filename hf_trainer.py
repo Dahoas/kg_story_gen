@@ -16,9 +16,12 @@ __LOG__ = True
 
 wandb.init(entity='dahoas') if __LOG__ else None
 
-def finetune(model_type, tokenizer_path, tokenizer_type, datapath, task, **kwargs):
+def finetune(model_type, tokenizer_path, tokenizer_type, datapath, task, ckpt_path, use_ckpt, **kwargs):
 	tokenizer, gen_token_id = load_tokenizer(tokenizer_path, tokenizer_type)
-	model = AutoModelForCausalLM.from_pretrained(model_type)
+	if use_ckpt:
+		model = AutoModelForCausalLM.from_pretrained(ckpt_path)
+	else:
+		model = AutoModelForCausalLM.from_pretrained(model_type)
 	model.resize_token_embeddings(len(tokenizer))
 
 	dataset = get_dataset_from_task(datapath, task, tokenizer, gen_token_id)
@@ -26,9 +29,8 @@ def finetune(model_type, tokenizer_path, tokenizer_type, datapath, task, **kwarg
 	train_size = int(0.9 * len(dataset))
 	train_dataset, val_dataset = random_split(dataset, [train_size, len(dataset) - train_size])
 
-	save_name = 'kg-target-entity-gpt2'
 	training_args = TrainingArguments(
-	output_dir=save_name,
+	output_dir='results',
 	num_train_epochs=8,
 	per_device_train_batch_size=8,
 	per_device_eval_batch_size=4,
@@ -46,7 +48,7 @@ def finetune(model_type, tokenizer_path, tokenizer_type, datapath, task, **kwarg
 																'labels': torch.stack([f[2] for f in data])}).train()
 
 
-	model.save_pretrained(f'{save_name}')
+	model.save_pretrained(ckpt_path)
 
 if __name__ == "__main__":
 	finetune()

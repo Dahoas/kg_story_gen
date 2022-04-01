@@ -18,7 +18,7 @@ class ExtractiveDataset(Dataset):
 		with open(file_path, 'r') as fr:
 			line_iterator = tqdm(fr, desc='processing {}'.format(file_path))
 			for line in line_iterator:
-				if count < 5000:
+				if count < 2000000:
 					count+=1
 					graph_obj = json.loads(line.strip())
 
